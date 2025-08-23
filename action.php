@@ -106,6 +106,9 @@
             $result = Commonmark::RendtoDW($markdown, $this->getConf('frontmatter_tag'));
             $event->data = $result['text'];
         }
+        else {
+            return;
+        }
         $event->data = $result['text'];
         if ($this->firstRun == true) {
             // get position of each line
