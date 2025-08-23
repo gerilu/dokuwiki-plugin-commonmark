@@ -104,7 +104,6 @@
             $markdown = preg_replace('/\A<!DOCTYPE markdown>\n/','',$markdown);
             $markdown = ltrim($markdown);
             $result = Commonmark::RendtoDW($markdown, $this->getConf('frontmatter_tag'));
-            $event->data = $result['text'];
         }
         else {
             return;
